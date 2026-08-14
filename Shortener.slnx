@@ -1,2 +1,6 @@
 <Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/QRCodeAPI/QRCodeAPI.csproj" Id="5533d8f3-21c6-4812-bdd8-f43e2bdf9b0c" />
+  </Folder>
+  <Folder Name="/frontend/" />
 </Solution>
