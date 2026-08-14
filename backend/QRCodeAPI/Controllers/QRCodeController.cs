@@ -2,12 +2,11 @@
 using QRCodeAPI.Models;
 using QRCodeAPI.Services;
 using System.Text.Json;
-using QRCodeAPI.Models;
 
 namespace QRCodeAPI.Controllers;
 
 [ApiController]
-[Route("api/v1/qrcodes")] 
+[Route("api/v1/qrcodes")]
 [Produces("application/json")]
 public class QRCodeController : ControllerBase
 {
@@ -185,7 +184,8 @@ public class QRCodeController : ControllerBase
             var imageBytes = Convert.FromBase64String(base64Data);
             var decodedText = _qrService.DecodeQRCode(imageBytes);
 
-            if (decodedText.StartsWith("Error"))
+            if (decodedText.StartsWith("Error", StringComparison.OrdinalIgnoreCase) ||
+                decodedText.Equals("No QR code found", StringComparison.OrdinalIgnoreCase))
             {
                 return Ok(new ApiResponse<QRCodeReadResponse>
                 {
@@ -213,7 +213,7 @@ public class QRCodeController : ControllerBase
             }
             catch
             {
-                
+
             }
 
             var response = new QRCodeReadResponse
