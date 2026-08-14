@@ -1,4 +1,4 @@
-html { min-width: 320px; background: #f4f7f2; }
+html { min-width: 320px; background: #f4f8fc; }
 
 body {
   margin: 0;
@@ -8,6 +8,6 @@ body {
 }
 
 button:focus-visible, input:focus-visible, a:focus-visible {
-  outline: 3px solid rgba(200, 238, 105, .9);
+  outline: 3px solid rgba(142, 220, 255, .9);
   outline-offset: 3px;
 }
