@@ -57,16 +57,3 @@ Built with **ASP.NET Core** on the backend and **React** on the frontend.
 
 ---
 
-## Tech Stack
-
-| Layer       | Technology                          |
-|-------------|-------------------------------------|
-| Backend     | ASP.NET Core (.NET 10)              |
-| QR Generate | QRCoder                             |
-| QR Decode   | ZXing.Net                           |
-| Frontend    | React 19 (Create React App)         |
-| API Docs    | Swagger / OpenAPI                   |
-
----
-
-## Project Structure
